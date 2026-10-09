@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <title>Sales CRM</title>
+    <link rel="stylesheet" href="./crm-app.css" />
+  </head>
+  <body>
+    <main id="app" aria-live="polite">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true">SC</div>
+        <div>
+          <p class="eyebrow">SALES OPERATIONS</p>
+          <h1>Lead desk</h1>
+        </div>
+        <span id="connection" class="connection"><span></span> Connecting</span>
+      </header>
+      <section class="search-band" aria-label="Lead search">
+        <label class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="query" type="search" placeholder="Search name, company, or email" autocomplete="off" />
+        </label>
+        <select id="status" aria-label="Filter by sales status">
+          <option value="">All statuses</option>
+          <option value="new">New</option>
+          <option value="contacted">Contacted</option>
+          <option value="qualified">Qualified</option>
+          <option value="proposal">Proposal</option>
+          <option value="won">Won</option>
+          <option value="lost">Lost</option>
+        </select>
+        <button id="search" class="search-button" type="button" aria-label="Search leads" title="Search leads">Search</button>
+      </section>
+      <div id="message" class="message" role="status"></div>
+      <section class="workspace">
+        <aside class="results-panel" aria-label="Search results">
+          <div class="section-heading">
+            <h2>Leads</h2>
+            <span id="result-count" class="result-count">0</span>
+          </div>
+          <div id="results" class="results-list"></div>
+          <div class="pagination">
+            <button id="previous" type="button" aria-label="Previous page" title="Previous page">‹</button>
+            <span id="page-label">Page 1</span>
+            <button id="next" type="button" aria-label="Next page" title="Next page">›</button>
+          </div>
+        </aside>
+        <section id="detail" class="detail-panel" aria-label="Selected lead">
+          <div class="empty-state">
+            <div class="empty-icon" aria-hidden="true">↗</div>
+            <h2>Select a lead</h2>
+            <p>Choose a result to review its history and next steps.</p>
+          </div>
+        </section>
+      </section>
+      <footer class="footnote"><span class="live-dot"></span> Changes save directly to the CRM</footer>
+    </main>
+    <script type="module" src="./crm-app.ts"></script>
+  </body>
+</html>

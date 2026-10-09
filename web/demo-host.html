@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sales CRM — Working demo</title>
+    <style>
+      body { margin: 0; background: #eef2f6; color: #243247; font: 15px system-ui, sans-serif; }
+      header { max-width: 1200px; margin: 24px auto 16px; padding: 0 20px; }
+      h1 { margin: 0 0 8px; font-size: 24px; }
+      p { margin: 0 0 8px; }
+      iframe { display: block; width: min(1200px, 100%); height: 850px; border: 0; margin: auto; background: white; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sales CRM demo</h1>
+      <p>Search for Juniper Residential, select the lead, and mark a follow-up complete. Changes persist after a restart.</p>
+      <p id="status" role="status">Connecting to the CRM…</p>
+    </header>
+    <iframe id="crm" title="Sales CRM lead desk" sandbox="allow-scripts"></iframe>
+    <script src="/demo-host.js"></script>
+  </body>
+</html>

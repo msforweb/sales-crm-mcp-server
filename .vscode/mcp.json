@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "sales-crm-mcp-server": {
+      "type": "stdio",
+      "command": "node",
+      "cwd": "${workspaceFolder}",
+      "args": ["dist/stdio.js"],
+      "env": {
+        "CRM_MODE": "demo",
+        "DEMO_MODE": "true",
+        "CRM_DATABASE_PATH": "./data/sales-crm.sqlite"
+      }
+    }
+  }
+}

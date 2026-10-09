@@ -1,0 +1,45 @@
+{
+  "name": "sales-crm-mcp-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "npm run dev:stdio",
+    "dev:stdio": "npm run build:ui && tsx watch src/stdio.ts",
+    "dev:http": "npm run build:ui && tsx watch src/http.ts",
+    "typecheck": "tsc --noEmit",
+    "build:ui": "node scripts/build-ui.mjs",
+    "build": "npm run build:ui && tsc -p tsconfig.build.json",
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/http.js",
+    "db:seed": "tsx src/seed.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "demo": "npm run build && node dist/demo.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "^2.3.1",
+    "@modelcontextprotocol/ext-apps": "^2.0.3",
+    "@modelcontextprotocol/node": "^2.1.1",
+    "@modelcontextprotocol/server": "^2.3.1",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "jose": "^6.2.12",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.1.4",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "esbuild": "^0.28.2",
+    "vitest": "^5.0.3"
+  }
+}

@@ -196,3 +196,5 @@ Verified from npm on 2026-10-07: `@modelcontextprotocol/server` **2.3.1**, `@mod
 - Keycloak administration guide: https://www.keycloak.org/docs/latest/server_admin/
 
 OpenAI documents ChatGPT as supporting MCP Apps. The wider MCP client matrix notes that host support varies. Therefore the code uses the documented MCP Apps bridge and metadata, but ChatGPT UI rendering remains a manual verification item above.
+
+[![M8ven Score](https://m8ven.ai/badge/mcp/msforweb-sales-crm-mcp-server-4pgyrv?v=b63fc81d0d3009245a1eebd9acdf4205)](https://m8ven.ai/mcp/msforweb-sales-crm-mcp-server-4pgyrv?s=readme)
